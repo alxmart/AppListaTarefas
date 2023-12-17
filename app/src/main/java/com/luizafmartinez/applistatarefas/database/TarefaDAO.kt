@@ -11,11 +11,8 @@ class TarefaDAO(context: Context) : ITarefaDAO {
     private val leitura = DatabaseHelper( context ).readableDatabase
 
     override fun salvar(tarefa: Tarefa): Boolean {
-
         val conteudos = ContentValues()
-
         conteudos.put("${DatabaseHelper.COLUNA_DESCRICAO}", tarefa.descricao)
-
         try {
             escrita.insert(
                 DatabaseHelper.NOME_TABELA_TAREFAS,
@@ -32,20 +29,16 @@ class TarefaDAO(context: Context) : ITarefaDAO {
     }
 
 
-    override fun salvar(idTarefa: Int): Boolean {
-
-
+    override fun atualizar(tarefa: Tarefa): Boolean {
+        TODO("Not yet implemented")
     }
 
-    override fun atualizar(tarefa: Tarefa): Boolean {
-
-
+    override fun remover(idTarefa: Int): Boolean {
+        TODO("Not yet implemented")
     }
 
     override fun listar(): List<Tarefa> {
-
-
+        TODO("Not yet implemented")
     }
-
 
 }
