@@ -11,8 +11,11 @@ class TarefaDAO(context: Context) : ITarefaDAO {
     private val leitura = DatabaseHelper( context ).readableDatabase
 
     override fun salvar(tarefa: Tarefa): Boolean {
+
         val conteudos = ContentValues()
+
         conteudos.put("${DatabaseHelper.COLUNA_DESCRICAO}", tarefa.descricao)
+
         try {
             escrita.insert(
                 DatabaseHelper.NOME_TABELA_TAREFAS,
