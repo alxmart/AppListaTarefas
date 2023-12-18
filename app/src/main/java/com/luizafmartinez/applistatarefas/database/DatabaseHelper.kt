@@ -24,6 +24,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(
             "$COLUNA_DESCRICAO VARCHAR(70)," +
             "$COLUNA_DATA_CADASTRO DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP" +
             ");"
+
         try {
             db?.execSQL( sql )
             Log.i("info_db", "Sucesso ao criar a tabela")
